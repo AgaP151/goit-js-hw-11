@@ -17,6 +17,7 @@ const lightbox = new SimpleLightbox('.gallery a');
 
 loadMoreBtnEl.classList.add("hidden");
 
+
 function createGalleryCards(arr) {
   return  arr
 .map(
