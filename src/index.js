@@ -31,25 +31,25 @@ function createGalleryCards(arr) {
     downloads,
   }) => 
  `<div class="photo-card">  
-<a class="cards-set-item link" href="{{largeImageURL}}">
-  <img class="photo-card__img" src="{{webformatURL}}" alt="{{tags}}" loading="lazy" />    
+<a class="cards-set-item link" href="${largeImageURL}">
+  <img class="photo-card__img" src="${webformatURL}" alt="${tags}" loading="lazy" />    
   </a>
   <div class="info">
         <p class="info-item">
             <b>Likes</b>
-            {{likes}}
+            ${likes}
         </p>
         <p class="info-item">
             <b>Views</b>
-            {{views}}
+            ${views}
         </p>
         <p class="info-item">
             <b>Comments</b>
-            {{comments}}
+            ${comments}
         </p>
         <p class="info-item">
             <b>Downloads</b>
-            {{downloads}}
+            ${downloads}
         </p>
     </div>
 </div>

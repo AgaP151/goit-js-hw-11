@@ -1,6 +1,5 @@
 import axios from "axios";
 
-
 export class PixabayAPI {
     #BASE_URL = 'https://pixabay.com/api/';
     #API_KEY = '39899011-b77b3552b8ef0b4d082b172dc';

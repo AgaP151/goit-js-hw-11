@@ -1,14 +1,17 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   
   body {
-        background-color: #fafafa;
+        background: linear-gradient(90deg, rgb(194, 205, 210), rgb(146, 152, 158));
     color: #212121;
     line-height: 1.5;
     margin: 0;
-  }
-  
+    min-width: 100vw;
+    min-height: 100vh;
+  } 
 
   
   h1,
@@ -37,8 +40,9 @@
   
   img {
     display: block;
-    max-width: 100%;
-    height: auto;
+   object-fit: cover;
+    height: 100%;
+    width: 100%;
   }
   
   button {
@@ -58,15 +62,15 @@
   
   .container {
     position: relative;
-  
+    margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-  
     width: 1200px;
-  
+    background-color: inherit;
     overflow: hidden;
+    
   }
   
 .hidden {
@@ -75,27 +79,30 @@
   
 .cards-set {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     gap: var(--indent);
+    width: auto;
+    
   }
-  
+
   .cards-set-item {
-    width: calc((100% - (var(--indent) * (var(--cards-in-row) - 1))) / (var(--cards-in-row)));
-  
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  
+    border: 2px solid;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;  
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 4px 4px rgba(0, 0, 0, 0.3), 1px 4px 6px rgba(0, 0, 0, 0.8);
     transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .cards-set-item:hover,
   .cards-set-item:focus {
-    scale: 1.02;
+    scale: 1.09;
   }
   
   .photo-card__img {
-    width: 100%;
+    width: 270px;
     height: 188px;
-    object-fit: cover;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 7px;
   }
   
   
@@ -110,33 +117,30 @@
     padding: 8px;
     width: 1200px;
   
-    background-color: #7aaef3;
+    background-color: inherit;
   }
   
   .search-form__input {
     width: 280px;
     padding: 5px;
-  
+
     border: none;
     border: 1px solid grey;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border-right: none;    
-  }
-  
-  .search-form__input:focus {
+}
+
+.search-form__input:focus {
     outline: none;
-  }
-  
-  .search-form__btn {
+}
+
+.search-form__btn {
     display: flex;
     justify-content: center;
     align-items: center;
-  
     width: 70px;
     padding: 5px;
-  
-    
     border: 1px solid grey;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -151,67 +155,53 @@
     background-color: #e3e1e1;
   }
   
-  .gallery {
-    margin-top: 60px;
-    margin-bottom: 15px;
-  }
   
   .load-more {
-    margin-bottom: 15px;
-    margin-right: auto;
-    margin-left: auto;
-  
+    margin: 10px auto 15px auto;
     cursor: pointer;
-    
     padding: 6px 22px;
-    
     min-height: 38px;
     min-width: 73px;
     border: none;
     border-radius: 4px;
-    
-    color: #F5F4FA;
-    background-color: #7aaef3;
-    
-    font-family: inherit;
+color: #000;
+    background-color: #e3e1e1;
+font-family: inherit;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: calc(26 / 16);
     text-align: center;
     letter-spacing: 0.03em;
+    border: 1px solid #000;
     
     transition: color var(--hover-focus-duration) var(--hover-focus-timing-function),
-      background-color var(--hover-focus-duration) var(--hover-focus-timing-function),
-      box-shadow var(--hover-focus-duration) var(--hover-focus-timing-function);
-  }
-  
-  .load-more:hover,
-  .load-more:focus {
-    background-color:  #7aaef3;
+    background-color var(--hover-focus-duration) var(--hover-focus-timing-function),
+    box-shadow var(--hover-focus-duration) var(--hover-focus-timing-function);
+}
+
+.load-more:hover,
+.load-more:focus {
+    background-color:  #e3e1e1;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  }
-  
-  .info {
+}
+
+.info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 5px;  
-  
-    padding: 10px;
-  
-    border-right: 1px solid #EEEEEE;
-    border-bottom: 1px solid #EEEEEE;
-    border-left: 1px solid #EEEEEE;
-  }
-  
-  .info-item {
+    gap: 5px;    
+    padding: 10px;  
+    border: 2px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.info-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  
     font-size: 14px;
-  }
-  
-  
+}
+
